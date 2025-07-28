@@ -17,7 +17,11 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.chitchat"
+      "package": "com.anonymous.chitchat",
+      "associatedDomains": [
+        "applinks:climbing-quagga-2.clerk.accounts.dev",
+        "webcredentials:climbing-quagga-2.clerk.accounts.dev"
+      ]
     },
     "web": {
       "bundler": "metro",
