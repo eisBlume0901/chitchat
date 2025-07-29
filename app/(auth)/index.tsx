@@ -3,6 +3,7 @@ import { Text } from "@/components/Text";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "@/components/Button";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 
 export default function Index() {
   return (
@@ -13,6 +14,10 @@ export default function Index() {
                 alignItems: "center",
             }}
           >
+              <Image
+                  source={require("@/assets/images/logo.png")}
+                  style={{ width: 100, height: 100 }}
+              />
               <Text style={{
                   fontSize: 32,
                   fontWeight: "bold"}}
