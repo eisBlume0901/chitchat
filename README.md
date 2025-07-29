@@ -35,3 +35,8 @@ Package name: Go to app.json and go to android key and get the package name valu
 
 SHA-256 Certificate Fingerprint: Go to Expo (https://expo.dev/), open your project, and go to Credentials to get the Build credentials
 needed by Clerk
+
+Dynamic Routes
+
+[template_name.extension] - use square brackets
+(group_folder_name) - use parenthesis to group routes
