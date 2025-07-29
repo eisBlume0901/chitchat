@@ -1,6 +1,5 @@
 Run the following commands:
 
-
 npx create-expo-app@latest chitchat
 
 npm run reset-project
@@ -20,17 +19,19 @@ npm install @legendapp/list
 npm add react-native-appwrite@0.7.0
 
 Since passkeys for Android requires SHA-256 fingerprint, you need to generate a keystore file and add it to your project.
-npm install -g eas-cli
-eas login - login to your Expo account
-eas build:configure
-- Choose android platform
-npm install expo-dev-client
-eas build --platform android --profile development - build the android app with development profile (can also use --platform all to build both android and ios)
-- Select y to generate a new keystore file and wait
-- After the build is complete, scan the QR code with Expo Go app and install the apk 
-- Allow your settings to install apps from unknown sources
+1. npm install -g eas-cli 
+2. eas login - login to your Expo account
+3. eas build:configure 
+4. Choose android platform 
+5. npm install expo-dev-client 
+6. eas build --platform android --profile development - build the android app with development profile (can also use --platform all to build both android and ios)
+7. Select y to generate a new keystore file and wait 
+8. After the build is complete, scan the QR code with Expo Go app and install the apk 
+9. Allow your settings to install apps from unknown sources
 
 The following information needed for Clerk configuration:
+
 Package name: Go to app.json and go to android key and get the package name value
+
 SHA-256 Certificate Fingerprint: Go to Expo (https://expo.dev/), open your project, and go to Credentials to get the Build credentials
 needed by Clerk
