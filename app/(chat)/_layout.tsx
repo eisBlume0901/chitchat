@@ -36,7 +36,7 @@ export default function RootLayout() {
                     headerTitleAlign: "center",
                     headerLeft: () => (
                         <Link dismissTo href="/">
-                            <Ionicons name={"arrow-back-outline"} size={32} color={"white"} />
+                            <Ionicons name={"chevron-back-outline"} size={32} color={"white"} />
                         </Link>
                     )
                 }}
@@ -49,7 +49,7 @@ export default function RootLayout() {
                     headerTitleAlign: "center",
                     headerLeft: () => (
                         <Link dismissTo href="/">
-                            <Ionicons name={"arrow-back-outline"} size={32} color={"white"} />
+                            <Ionicons name={"chevron-back-outline"} size={32} color={"white"} />
                         </Link>
                     )
                 }}
