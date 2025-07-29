@@ -1,6 +1,6 @@
 import { Pressable, PressableProps, Text, ViewStyle } from "react-native";
 
-export function Button({ children, style, ...props}) : PressableProps {
+export function Button({ children, style, ...props} : PressableProps) {
 
     return (
         <Pressable
