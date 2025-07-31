@@ -40,3 +40,9 @@ Dynamic Routes
 
 [template_name.extension] - use square brackets
 (group_folder_name) - use parenthesis to group routes
+
+Connecting with Appwrite
+1. If you have already installed, appwrite and polyfill, then you can just add the platform
+2. If not, then follow the instructions when adding a new React Native platform in AppWrite
+3. Copy paste the environment variables to your .env file.
+4. As for the database id, you can easily copy paste it from the Appwrite dashboard of your project.

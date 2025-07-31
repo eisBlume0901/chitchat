@@ -1,16 +1,36 @@
-import {FlatList, RefreshControl, View} from "react-native";
+import { FlatList, RefreshControl, View } from "react-native";
 import { Text } from "@/components/Text";
 import { chatRooms } from "@/utils/test";
 import { Link } from "expo-router";
-import {useState} from "react";
-import {Ionicons} from "@expo/vector-icons";
+import { useState, useEffect } from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { ChatRoom } from "@/utils/types";
+import { db, appWriteConfig } from "@/utils/appwrite";
+import { Query } from "react-native-appwrite";
+
 
 export default function Index() {
+    const [ chatRooms, setChatRooms ] = useState<ChatRoom[]>([]);
     const [ refreshing, setRefreshing ] = useState(false);
-
     const handleRefresh = async () => {
 
     }
+
+    const fetchChatRooms = async() => {
+        try {
+            const { documents, total } = await db.listDocuments(
+                appWriteConfig.db,
+                appWriteConfig.col.ChatRooms,
+                [Query.limit(100)])
+            console.log("Chat Rooms: ", documents);
+        } catch (err) {
+            console.log("CHAT index.tsx fetchChatRooms error: ", err);
+        }
+    }
+
+    useEffect(() => {
+        fetchChatRooms();
+    }, []);
 
     return (
       <FlatList
@@ -32,6 +52,7 @@ export default function Index() {
                             width: "100%",
                             borderRadius: 16,
                             alignItems: "center",
+
                             flexDirection: "row",
                             backgroundColor: "#262626",
                             justifyContent: "space-between"
