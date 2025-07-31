@@ -12,11 +12,9 @@ npm add @clerk/clerk-expo @clerk/types @clerk/expo-passkeys
 
 npm install expo-secure-store expo-auth-session expo-crypto expo-web-browser expo-build-properties
 
-npm install react-native-appwrite@0.7.0 react-native-url-polyfill
+npm install react-native-appwrite react-native-url-polyfill
 
 npm install @legendapp/list
-
-npm add react-native-appwrite@0.7.0
 
 Since passkeys for Android requires SHA-256 fingerprint, you need to generate a keystore file and add it to your project.
 1. npm install -g eas-cli 

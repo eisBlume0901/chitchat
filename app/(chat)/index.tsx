@@ -5,9 +5,8 @@ import { Link } from "expo-router";
 import { useState, useEffect } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { ChatRoom } from "@/utils/types";
-import { db, appWriteConfig } from "@/utils/appwrite";
+import { databases, appWriteConfig } from "@/utils/appwrite";
 import { Query } from "react-native-appwrite";
-
 
 export default function Index() {
     const [ chatRooms, setChatRooms ] = useState<ChatRoom[]>([]);
@@ -18,7 +17,7 @@ export default function Index() {
 
     const fetchChatRooms = async() => {
         try {
-            const { documents, total } = await db.listDocuments(
+            const { documents, total } = await databases.listDocuments(
                 appWriteConfig.db,
                 appWriteConfig.col.ChatRooms,
                 [Query.limit(100)])
